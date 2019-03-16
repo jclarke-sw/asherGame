@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 
+Hello Asher!!  Welcome to the first stage of building a Plants VS Zombies EXE game!
+
+This file is written using the HTML language. Here's more info on HTML - https://www.w3schools.com/html/default.asp
+If this was a console game, the HTML file is like the TV, & the Javascript file is like the console that  makes the game happen.
+
+In HTML, information is written between tags.
+Each has an opening section with attributes, a middle section with the value, and a closing section.
+The opening tag says what this section is, and the attributes explain what it looks like or what it does.
+The closing section is pretty boring, and just says that the section is complete.
+
+There are special tags called comments.  This is a comment! 
+It starts with a <!-- tag, which tells the computer to ignore this line, and that it only has information for human readers.
+It's like whispering, so that Alexa doesn't get confused.  It's a useful way to put explanations in your code for humans.
+
+For example, in the code below you'll see <h1 id="Header">The Asher Games Dot EXE</h1>
+The opening section is marked with <h1 id="Header">, and has the attributes id="Header".  h1 just means it's a level 1 heading.
+The id attribute doesn't mean much at the moment, but it's useful to recognise that it's there.
+</h1> just tells the computer to realise that the level 1 heading section is finished.
+
+To change the behaviour of the game, change this file.
+To chang how you see the game, change the HTML file.
+
+-->
+<html lang="en">
+<!-- So,  <html lang="en">  just tells the computer that we are using HTML language in English. -->
+<head>
+	<!-- HTML files are made up of 2 main parts, the head & the body.  This is the head part.
+    This just tells the computer the background info on how to read the file.
+    Try reading the begining sections of each tag to see what it does! -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>The Asher Game Dot EXE</title>
+	<style>
+	canvas {
+	    border:1px solid #d3d3d3;
+	    background-color: #f1f1f1;
+	}
+	</style>
+</head>
+<!-- So that's the background information done.  Now we get to the body tag.  This is the part of the page that you can see -->
+<body onload="startGame()">
+	<!-- That attribute above tells the page to load the startGame function over in the Javascript file -->
+	<script src="asherGameSimpleScript.js"></script>
+	<!-- That line tells the HTML file that there is a javascript file that it should go and load up -->
+	<br><br>
+	<!-- <br> just means line break, or make a new line -->
+	<!-- Here are the buttons that load the functions to start or stop the sunflower moving -->
+		<button style="width:300px;" onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
+		<button style="width:150px;" onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
+		<button style="width:150px;" onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
+		<button style="width:300px;" onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+
+</body>
+</html>
